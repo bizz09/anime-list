@@ -8,8 +8,12 @@ export default function InputSearch() {
     const router = useRouter()
     const handleSearch = (event) => {
         event.preventDefault()
-        const keyword = searchRef.current.value;
-        router.push(`/search/${keyword}`)
+        const keyword = searchRef.current.value.trim();
+        if (keyword) {
+            router.push(`/search/${keyword}`)
+        } else {
+            alert("pencarian tidak boleh kosong")
+        }
     }
     const handleKeyDown = (event) => {
         if (event.key === 'Enter') {
@@ -17,9 +21,9 @@ export default function InputSearch() {
         }
     };
     return (
-        <div className="relative">
-            <input placeholder="Cari anime.." onKeyDown={handleKeyDown} className="p-2 border-2 border-black rounded-lg" ref={searchRef} />
-            <button className="absolute top-2 end-2" onClick={handleSearch}><MagnifyingGlass size={25} /></button>
+        <div className="relative ml-10 -mr-6">
+            <input placeholder="Cari anime.." onKeyDown={handleKeyDown} className="p-2 border-2 border-black rounded-full w-[92%]" ref={searchRef} />
+            <button className="absolute top-2 end-[15%] " onClick={handleSearch}><MagnifyingGlass size={25} className="" /></button>
         </div>
     )
 }
