@@ -12,7 +12,7 @@ export default function InputSearch() {
         if (keyword) {
             router.push(`/search/${keyword}`)
         } else {
-            alert("pencarian tidak boleh kosong")
+            
         }
     }
     const handleKeyDown = (event) => {
