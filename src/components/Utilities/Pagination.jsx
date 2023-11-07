@@ -20,9 +20,13 @@ export default function Pagination({ page, lastPage, setPage }) {
   }
   return (
     <div className='flex justify-center items-center py-4 px-2 gap-4'>
-      <button onClick={handlePrevPage} className='transition-all hover:text-accent'><CaretLeft size={28} /></button>
+      {page <= 1 ? null : (
+        <button onClick={handlePrevPage} className='transition-all hover:text-accent'><CaretLeft size={28} /></button>
+      )}
       <p className='font-medium'>{page} dari {lastPage}</p>
-      <button onClick={handleNextPage} className='transition-all hover:text-accent'><CaretRight size={28} /></button>
+      {page >= lastPage ? null : (
+        <button onClick={handleNextPage} className='transition-all hover:text-accent'><CaretRight size={28} /></button>
+      )}
     </div>
   )
 }
