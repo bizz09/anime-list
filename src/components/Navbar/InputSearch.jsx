@@ -15,7 +15,7 @@ export default function InputSearch() {
             
         }
 
-        // if(!keyword || keyword == trim() == )
+        if(!keyword || keyword.trim() == "" ) return
     }
     const handleKeyDown = (event) => {
         if (event.key === 'Enter') {
