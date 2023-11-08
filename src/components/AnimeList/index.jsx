@@ -13,7 +13,7 @@ const AnimeList = ({ api }) => {
                   <Image src={anime.images.webp.image_url} width={350} height={350} alt='' className='w-full max-h-64 object-cover rounded-lg' />
                 </div>
                 <div className='absolute justify-items-center bottom-0 w-[100%] h-[30%] bg-dark/75 rounded-lg'>
-                  <h3 className='font-bold md:text-md text-sm p-2'>{anime.title}</h3>
+                  <h3 className='font-bold md:text-md text-sm p-2 '>{anime.title}</h3>
                 </div>
               </div>
             </Link>
