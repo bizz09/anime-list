@@ -11,19 +11,19 @@ const page = async ({ params: { id } }) => {
                 <h3 className='font-bold md:text-2xl'>{anime.data.title} - {anime.data.year}</h3>
             </div>
             <div className='pt-4 flex gap-4 overflow-x-auto'>
-                <div className='w-36 border flex flex-col items-center rounded p-2'>
+                <div className='w-36 border border-dark flex flex-col items-center rounded p-2'>
                     <h3>Peringkat </h3>
                     <p>{anime.data.rank}</p>
                 </div>
-                <div className='w-36 border flex flex-col items-center rounded p-2'>
+                <div className='w-36 border border-dark flex flex-col items-center rounded p-2'>
                     <h3>Score </h3>
                     <p>{anime.data.score}</p>
                 </div>
-                <div className='w-36 border flex flex-col items-center rounded p-2'>
+                <div className='w-36 border border-dark flex flex-col items-center rounded p-2'>
                     <h3>Anggota </h3>
                     <p>{anime.data.members}</p>
                 </div>
-                <div className='w-36 border flex flex-col items-center rounded p-2'>
+                <div className='w-36 border border-dark flex flex-col items-center rounded p-2'>
                     <h3>Episode </h3>
                     <p>{anime.data.episodes}</p>
                 </div>

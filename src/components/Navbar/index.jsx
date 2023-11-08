@@ -5,6 +5,7 @@ import InputSearch from "./InputSearch"
 import UserActionButton from "./UserActionButton";
 import Link from "next/link";
 import { BellIcon, Cog6ToothIcon } from "@heroicons/react/24/solid";
+import { SignOut, UserGear } from "@phosphor-icons/react";
 
 
 const Page = () => {
@@ -38,13 +39,13 @@ const Page = () => {
         </Typography>
         <div className="ml-auto flex gap-1 md:mr-4">
           <IconButton variant="text" color="gray">
-            <Cog6ToothIcon className="h-4 w-4"></Cog6ToothIcon>
+          <UserGear size={20} weight="bold" />
           </IconButton>
           <IconButton variant="text" color="gray">
-            <BellIcon className="h-4 w-4" />
+          <SignOut size={20} weight="bold" />
           </IconButton>
         </div>
-        <div className="relative flex w-full gap-2 md:w-max">
+        <div className="relative justify-center  flex w-full gap-2 md:w-max">
           <InputSearch />
           {/* <UserActionButton/> */}
           {/* <Input
